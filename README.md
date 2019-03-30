@@ -1,1 +1,1 @@
-Project on a card game.
+Project realated to card game BLACKJACK.
