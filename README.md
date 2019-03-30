@@ -1,1 +1,1 @@
-Project realated to card game BLACKJACK.
+Project related to card game BLACKJACK.
