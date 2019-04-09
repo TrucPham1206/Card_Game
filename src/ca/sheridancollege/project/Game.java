@@ -48,16 +48,18 @@ public abstract class Game
     }
     
     /**
-     * Play the game. This might be one method or many method calls depending
-     * on your game.
+     * Play the game.This might be one method or many method calls depending
+ on your game.
+     * @return 
      */
     public abstract void play();
     
     /**
      * When the game is over, use this method to declare and display a winning
      * player.
+     * @return 
      */
-    public abstract void declareWinner();
+    public abstract boolean declareWinner();
 
    
     

@@ -1,48 +1,48 @@
-/**
- * SYST 17796 Project Winter 2019 Base code.
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
- */
 package ca.sheridancollege.project;
+import java.util.ArrayList;
 
-/**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
- * @author dancye, 2018
- */
-public abstract class Player 
-{
-    private String playerID; //the unique ID for this player
-    
-    /**
-     * A constructor that allows you to set the player's unique ID
-     * @param name the unique ID to assign to this player.
-     */
-    public Player(String name)
-    {
-        playerID= name;
-    }
-    
-    /**
-     * @return the playerID
-     */
-    public String getPlayerID() 
-    {
-        return playerID;
+public abstract class Player {
+
+    private final String nickname;
+
+    private final ArrayList<Card> hand;
+
+    public Player(String nickname) {
+        this.nickname = nickname;
+        this.hand = new ArrayList<Card>();
     }
 
-    /**
-     * Ensure that the playerID is unique
-     * @param givenID the playerID to set
-     */
-    public void setPlayerID(String givenID) 
-    {
-        playerID = givenID;
+    public String getNickname() {
+        return nickname;
     }
-    
-    /**
-     * The method to be instantiated when you subclass the Player class
-     * with your specific type of Player and filled in with logic to play your game.
-     */
+
+    public void addCard(Card card) {
+        hand.add(card);
+    }
+
+    public int getHandSum() {
+        int handSum = 0;
+        for (Card card : hand) {
+            handSum += card.getFace().getValue();
+        }
+        return handSum;
+    }
+
+    public String getHandAsString(boolean hideCard) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(nickname + "\'s current hand:");
+        sb.append('\n');
+        for (int i = 0; i < hand.size(); i++) {
+            if (i == 0 && hideCard) {
+                sb.append("[Hidden card]");
+                sb.append('\n');
+            } else {
+                sb.append(hand.get(i));
+                sb.append('\n');
+            }
+        }
+        return sb.toString();
+    }
     public abstract void play();
-    
+
 }
