@@ -1,5 +1,5 @@
 /*
- * Truc Pham
+ * Truc Pham 
  * Student ID: 991511456
  * SYST10199 - Web Programming
  */
@@ -7,7 +7,7 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author phamt
+ * @author phamt and divjot
  */
 public abstract class Card {
 
