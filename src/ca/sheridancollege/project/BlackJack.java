@@ -1,6 +1,12 @@
 package ca.sheridancollege.project;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Scanner; 
+
+/* This is the main class of our project BlackJack
+@author: Truc,Divjot,Nguyen,Gaurav
+@version:1.4
+@since: 22 march,2019
+*/
 
 public class BlackJack{
 
@@ -214,6 +220,14 @@ public class BlackJack{
     public static boolean checkNumber(int s)
         {
             if(s <= 4 )
+        {
+        return true;
+        }
+        return false;
+        }
+     public static boolean checkWinner(int s)
+        {
+            if(s >= 21 )
         {
         return true;
         }
