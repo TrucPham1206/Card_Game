@@ -225,7 +225,7 @@ public class BlackJack{
         }
         return false;
         }
-     public static boolean checkWinner(int s)
+      public static boolean checkWinner(int s)
         {
             if(s >= 21 )
         {
@@ -233,5 +233,14 @@ public class BlackJack{
         }
         return false;
         }
-
+     
+       public static boolean checkMoney(int n)
+        {
+            if(n <=100 )
+        {
+        return true;
+        }
+        return false;
+        }
+     
 }
